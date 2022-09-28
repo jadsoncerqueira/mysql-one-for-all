@@ -2,4 +2,4 @@ SELECT can.coluna_cancoes As cancoes, COUNT(can.coluna_cancoes) AS reproducoes F
 INNER JOIN SpotifyClone.tabela_historico_de_reproducoes re
 ON can.cancao_id = re.coluna_historico_de_reproducoes
 GROUP BY can.coluna_cancoes
-ORDER BY reproducoes DESC LIMIT 2;
+ORDER BY reproducoes DESC, cancoes LIMIT 2;
